@@ -53,7 +53,8 @@ func main() {
 	log.SetLevel(log.DebugLevel)
 	log.SetFormatter(&log.JSONFormatter{})
 
-	viper.SetConfigName("config")
+	//viper.SetConfigName("config")
+	viper.SetConfigFile("config.yml")
 	viper.AddConfigPath(".")
 
 	if err := viper.ReadInConfig(); err != nil {
